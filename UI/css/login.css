@@ -1,0 +1,196 @@
+:root {
+  /* --dark-bg-color: rgba(0, 0, 0, 0.9); */
+  --dark-bg-color:rgba(19, 35, 47, 0.9);
+  --bg-color: #454747; 
+  --theme-color: rgba(255, 145, 0, 0.89); 
+  --white: #fff;
+  
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 80%;
+  overflow-y: scroll;
+}
+
+body {
+  background: var(--white) url("../img/bg7.jpg") no-repeat left top;
+  background-size: cover;
+  font-family: 'Helvetica Neue', Arial, Sans-Serif;
+  
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme-color);
+  transition: .5s ease;
+}
+a:hover {
+  color: var(--theme-color);
+}
+
+.form {
+  background: var(--dark-bg-color);
+  padding: 40px;
+  max-width: 440px;
+  margin: 100px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px var(--dark-bg-color);
+}
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: flex;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: var(--bg-color);
+  color: var(--white);
+  font-size: 14px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: var(--theme-color);
+  color: var(--white);
+}
+.tab-group .active a {
+  background: var(--theme-color);
+  color: var(--white);
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: var(--white);
+  font-weight: 250;
+  margin: 0 0 25px;
+}
+
+.logo{
+  text-align: center;
+  color: var(--white);
+  font-weight: 300;
+  margin: 0 0 0 0;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+}
+.slogan{
+  text-align: center;
+  color: var(--white);
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: var(--bg-color);
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 17px;
+}
+label .req {
+  margin: 2px;
+  color: var(--theme-color);
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+label.active .req {
+  opacity: 0;
+}
+label.highlight {
+  color: var(--white);
+}
+input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid var(--white);
+  color: var(--white);
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: var(--theme-color);
+}
+
+textarea {
+  border: 2px solid var(--white);
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: var(--theme-color);
+  color: var(--white);
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: var(--theme-color);
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}
